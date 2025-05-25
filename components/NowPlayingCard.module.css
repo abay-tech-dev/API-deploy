@@ -1,15 +1,4 @@
-:root {
-  --spotify-green: #1db954;
-  --spotify-green-light: #1ed760;
-  --widget-bg1: #2b3137;
-  --widget-bg2: #1b2226;
-  --text-main: #c3cbcb;
-  --text-muted: #adb8b6;
-}
-
-body {
-  background: none !important;
-}
+/* PAS de :root dans un CSS module ! */
 
 .widget {
   position: absolute;
@@ -17,7 +6,7 @@ body {
   left: 20px;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--widget-bg1) 70%, var(--widget-bg2) 100%);
+  background: linear-gradient(135deg, #2b3137 70%, #1b2226 100%);
   border-radius: 32px;
   padding: 12px 28px 12px 16px;
   min-width: 340px;
@@ -44,7 +33,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 100%;
-  background: var(--text-muted);
+  background: #adb8b6;
   opacity: 0.8;
   display: block;
 }
@@ -72,7 +61,7 @@ body {
 }
 
 .title {
-  color: var(--spotify-green);
+  color: #1db954;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 1px #23292e44;
@@ -83,7 +72,7 @@ body {
 }
 
 .artist {
-  color: var(--text-main);
+  color: #c3cbcb;
   font-weight: 400;
   opacity: 0.93;
   max-width: 110px;
@@ -93,7 +82,7 @@ body {
 }
 
 .dotSep {
-  color: var(--text-muted);
+  color: #adb8b6;
   margin: 0 2px;
   font-weight: bold;
   opacity: 0.65;
@@ -110,7 +99,7 @@ body {
 
 .progressBar {
   height: 100%;
-  background: linear-gradient(90deg, var(--spotify-green-light) 55%, var(--spotify-green) 100%);
+  background: linear-gradient(90deg, #1ed760 55%, #1db954 100%);
   border-radius: 3px;
   transition: width 0.3s cubic-bezier(0.77,0,0.18,1);
 }
