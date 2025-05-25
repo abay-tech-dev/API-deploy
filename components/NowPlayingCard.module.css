@@ -1,11 +1,3 @@
-.spotifyBg {
-  background: linear-gradient(120deg, #101d12 0%, #1db954 100%);
-  min-height: 100vh;
-  padding: 40px 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
 
 .npcard {
   width: 360px;
