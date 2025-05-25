@@ -91,7 +91,7 @@
 .playBtn {
   position: absolute;
   top: 58px;
-  right: 34px;
+  left: 34px;
   cursor: pointer;
   z-index: 2;
   transition: transform 0.11s;
