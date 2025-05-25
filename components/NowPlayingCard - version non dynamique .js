@@ -5,8 +5,7 @@ export default function NowPlayingCard() {
   const [track, setTrack] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fonction pour fetch la track en cours toutes les secondes
-  const fetchTrack = () => {
+  useEffect(() => {
     fetch("/api/nowplaying")
       .then(res => res.json())
       .then(data => {
@@ -14,12 +13,6 @@ export default function NowPlayingCard() {
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  };
-
-  useEffect(() => {
-    fetchTrack(); // Appel initial au montage
-    const interval = setInterval(fetchTrack, 1000); // Toutes les 1 seconde
-    return () => clearInterval(interval); // Nettoyage au démontage
   }, []);
 
   // Format mm:ss
