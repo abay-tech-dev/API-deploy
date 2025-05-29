@@ -50,18 +50,7 @@
   box-shadow: 0 2px 8px #0004;
 }
 
-.playBtn {
-  margin-bottom: 2px;
-  position: static;
-  right: auto;
-  top: auto;
-  cursor: pointer;
-  transition: transform 0.11s;
-}
 
-.playBtn:hover {
-  transform: scale(1.08);
-}
 
 .content {
   flex: 1;
@@ -80,7 +69,7 @@
   font-weight: 900;
   letter-spacing: 1px;
   margin-bottom: 6px;
-  text-align: left;
+  text-align: center;
   text-shadow: 0 3px 16px #000c;
   text-transform: lowercase;
   max-width: 180px;
@@ -95,7 +84,7 @@
   font-size: 1.03rem;
   font-weight: 400;
   margin-bottom: 18px;
-  text-align: left;
+  text-align: center;
   opacity: 0.88;
   text-shadow: 0 1px 9px #000a;
   max-width: 180px;
