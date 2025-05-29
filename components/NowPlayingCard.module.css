@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400&display=swap');
-
 .npcard {
   width: 360px;
   height: 200px;
@@ -11,10 +9,10 @@
   margin: 0 auto;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-/* Overlay sombre & effet Spotify */
 .overlay {
   width: 100%;
   height: 100%;
@@ -24,42 +22,16 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
-.contentRow {
+.content {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 18px;
-}
-
-.leftCol {
+  padding: 24px 24px 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 22px;
-  gap: 8px;
-}
-
-.album {
-  width: 54px;
-  height: 54px;
-  border-radius: 9px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px #0004;
-}
-
-
-
-.content {
-  flex: 1;
-  width: 100%;
-  padding: 18px 0 16px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
+  justify-content: flex-end;
 }
 
 .title {
@@ -68,11 +40,11 @@
   font-size: 1.45rem;
   font-weight: 900;
   letter-spacing: 1px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-align: center;
   text-shadow: 0 3px 16px #000c;
   text-transform: lowercase;
-  max-width: 180px;
+  max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -83,11 +55,11 @@
   color: #c6f1d6;
   font-size: 1.03rem;
   font-weight: 400;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   text-align: center;
   opacity: 0.88;
   text-shadow: 0 1px 9px #000a;
-  max-width: 180px;
+  max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -98,6 +70,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 0 18px 18px 18px;
+  /* Positionne la barre en bas */
 }
 
 .progressBarBG {
@@ -127,14 +101,4 @@
   text-shadow: 0 1px 8px #000c;
 }
 
-@media (max-width: 420px) {
-  .npcard {
-    width: 97vw;
-    min-width: 180px;
-    height: 44vw;
-    min-height: 120px;
-  }
-  .content { padding: 12px 8px 8px 8px; }
-  .title, .artist { max-width: 100px; font-size: 0.95rem; }
-  .album { width: 38px; height: 38px; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400&display=swap');
