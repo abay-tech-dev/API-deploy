@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400&display=swap');
 
 .npcard {
   width: 360px;
@@ -13,6 +14,7 @@
   align-items: flex-end;
 }
 
+/* Overlay sombre & effet Spotify */
 .overlay {
   width: 100%;
   height: 100%;
@@ -24,34 +26,82 @@
   align-items: center;
 }
 
-.content {
+.contentRow {
   width: 100%;
-  padding: 18px 28px 16px 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.leftCol {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 22px;
+  gap: 8px;
+}
+
+.album {
+  width: 54px;
+  height: 54px;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.playBtn {
+  margin-bottom: 2px;
+  position: static;
+  right: auto;
+  top: auto;
+  cursor: pointer;
+  transition: transform 0.11s;
+}
+
+.playBtn:hover {
+  transform: scale(1.08);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  padding: 18px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
 }
 
 .title {
+  font-family: 'Montserrat', Arial, sans-serif;
   color: #1db954;
   font-size: 1.45rem;
   font-weight: 900;
   letter-spacing: 1px;
   margin-bottom: 6px;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 3px 16px #000c;
   text-transform: lowercase;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .artist {
+  font-family: 'Inter', Arial, sans-serif;
   color: #c6f1d6;
   font-size: 1.03rem;
   font-weight: 400;
-  margin-bottom: 32px;
-  text-align: center;
+  margin-bottom: 18px;
+  text-align: left;
   opacity: 0.88;
   text-shadow: 0 1px 9px #000a;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .progressRow {
@@ -88,16 +138,6 @@
   text-shadow: 0 1px 8px #000c;
 }
 
-.playBtn {
-  position: absolute;
-  top: 58px;
-  left: 34px;
-  cursor: pointer;
-  z-index: 2;
-  transition: transform 0.11s;
-}
-.playBtn:hover { transform: scale(1.08); }
-
 @media (max-width: 420px) {
   .npcard {
     width: 97vw;
@@ -106,4 +146,6 @@
     min-height: 120px;
   }
   .content { padding: 12px 8px 8px 8px; }
+  .title, .artist { max-width: 100px; font-size: 0.95rem; }
+  .album { width: 38px; height: 38px; }
 }
